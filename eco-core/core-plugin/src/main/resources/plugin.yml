@@ -1,0 +1,27 @@
+name: EcoSkills
+version: ${projectVersion}
+main: com.willfp.ecoskills.EcoSkillsPlugin
+api-version: 1.16
+authors: [ Auxilor ]
+website: willfp.com
+load: STARTUP
+depend:
+  - eco
+  - ProtocolLib
+softdepend: []
+
+commands:
+  esreload:
+    description: Reloads config
+    permission: ecoskills.reload
+
+permissions:
+  ecoskills.*:
+    description: All ecoskills permissions
+    default: op
+    children:
+      ecoenchants.reload: true
+
+  ecoskills.reload:
+    description: Allows reloading the config
+    default: op
